@@ -1,9 +1,8 @@
 /* ================================
    COUNTDOWN LOGIC
 
-   Questa parte legge le date dal file config.js
-   e aggiorna automaticamente i countdown
-   ogni secondo.
+   Legge le date da config.js
+   e aggiorna automaticamente i countdown.
 ================================ */
 
 function calculateTimeLeft(targetDate) {
@@ -39,23 +38,38 @@ function updateCountdown(countdown) {
 
   const timeLeft = calculateTimeLeft(countdown.targetDate);
 
+  const timerElement = countdownElement.querySelector(".countdown-timer");
+  const messageElement = countdownElement.querySelector("[data-message]");
+
+  if (timeLeft.expired) {
+    if (timerElement) {
+      timerElement.style.display = "none";
+    }
+
+    if (messageElement) {
+      messageElement.textContent = countdown.finishedMessage;
+    }
+
+    return;
+  }
+
+  if (timerElement) {
+    timerElement.style.display = "grid";
+  }
+
+  if (messageElement) {
+    messageElement.textContent = "";
+  }
+
   countdownElement.querySelector("[data-days]").textContent = timeLeft.days;
   countdownElement.querySelector("[data-hours]").textContent = timeLeft.hours;
   countdownElement.querySelector("[data-minutes]").textContent = timeLeft.minutes;
   countdownElement.querySelector("[data-seconds]").textContent = timeLeft.seconds;
-
-  const messageElement = countdownElement.querySelector("[data-message]");
-
-  if (timeLeft.expired) {
-    messageElement.textContent = countdown.finishedMessage;
-  } else {
-    messageElement.textContent = "";
-  }
 }
 
 function startCountdowns() {
   if (!window.countdownConfig) {
-    console.error("File config.js non trovato oppure countdownConfig non definito.");
+    console.error("Errore: config.js non trovato oppure countdownConfig non definito.");
     return;
   }
 
@@ -69,3 +83,4 @@ function startCountdowns() {
 }
 
 startCountdowns();
+
