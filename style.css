@@ -124,3 +124,29 @@ button {
     font-size: 1.7rem;
   }
 }
+/* ================================
+   CORREZIONE COLORI COUNTDOWN
+   Migliora il contrasto dei numeri
+================================ */
+
+.countdown-timer div {
+  background: #ffffff;
+  border: 1px solid #d8d8d8;
+}
+
+.countdown-number {
+  color: #1f2933;
+}
+
+.countdown-label {
+  color: #4b5563;
+}
+
+.countdown-card {
+  background: #fdfdfd;
+  border: 1px solid #d6d6d6;
+}
+
+.countdown-card h3 {
+  color: #1f2933;
+}
