@@ -150,3 +150,10 @@ button {
 .countdown-card h3 {
   color: #1f2933;
 }
+.countdown-message {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #1f2933;
+}
