@@ -3,17 +3,70 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My First Website</title>
+  <title>It's the final countdown</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main>
-    <h1>Hello, web.</h1>
-    <p>This is my first website deployed with GitHub and Vercel.</p>
-    <button id="myButton">Click me</button>
-    <p id="message"></p>
-  </main>
+<section class="countdown-section" aria-labelledby="countdown-title">
+  <h2 id="countdown-title">Prossime scadenze</h2>
 
-  <script src="script.js"></script>
+  <div class="countdown-grid">
+    <article class="countdown-card" id="concorso-letterario">
+      <h3>Concorso letterario</h3>
+
+      <div class="countdown-timer">
+        <div>
+          <span class="countdown-number" data-days>0</span>
+          <span class="countdown-label">giorni</span>
+        </div>
+
+        <div>
+          <span class="countdown-number" data-hours>0</span>
+          <span class="countdown-label">ore</span>
+        </div>
+
+        <div>
+          <span class="countdown-number" data-minutes>0</span>
+          <span class="countdown-label">minuti</span>
+        </div>
+
+        <div>
+          <span class="countdown-number" data-seconds>0</span>
+          <span class="countdown-label">secondi</span>
+        </div>
+      </div>
+
+      <p class="countdown-message" data-message></p>
+    </article>
+
+    <article class="countdown-card" id="vacanze">
+      <h3>Vacanze</h3>
+
+      <div class="countdown-timer">
+        <div>
+          <span class="countdown-number" data-days>0</span>
+          <span class="countdown-label">giorni</span>
+        </div>
+
+        <div>
+          <span class="countdown-number" data-hours>0</span>
+          <span class="countdown-label">ore</span>
+        </div>
+
+        <div>
+          <span class="countdown-number" data-minutes>0</span>
+          <span class="countdown-label">minuti</span>
+        </div>
+
+        <div>
+          <span class="countdown-number" data-seconds>0</span>
+          <span class="countdown-label">secondi</span>
+        </div>
+      </div>
+
+      <p class="countdown-message" data-message></p>
+    </article>
+  </div>
+</section>
 </body>
 </html>
