@@ -1,74 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>It's the final countdown</title>
+  <title>Countdown poetici</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-<section class="countdown-section" aria-labelledby="countdown-title">
-  <h2 id="countdown-title">Prossime scadenze</h2>
+  <header class="hero-section">
+    <div class="hero-card">
+      <p class="hero-kicker">Piccola dashboard personale</p>
+      <h1>⏳ Countdown poetici e vacanzieri</h1>
+      <p class="hero-text">
+        Una pagina semplice per tenere d’occhio concorsi di poesia,
+        scadenze importanti e giorni mancanti alle prossime vacanze.
+      </p>
+    </div>
+  </header>
 
-  <div class="countdown-grid">
-    <article class="countdown-card" id="concorso-letterario">
-      <h3>Concorso letterario</h3>
-
-      <div class="countdown-timer">
-        <div>
-          <span class="countdown-number" data-days>0</span>
-          <span class="countdown-label">giorni</span>
-        </div>
-
-        <div>
-          <span class="countdown-number" data-hours>0</span>
-          <span class="countdown-label">ore</span>
-        </div>
-
-        <div>
-          <span class="countdown-number" data-minutes>0</span>
-          <span class="countdown-label">minuti</span>
-        </div>
-
-        <div>
-          <span class="countdown-number" data-seconds>0</span>
-          <span class="countdown-label">secondi</span>
-        </div>
+  <main>
+    <section class="page-section poetry-section" aria-labelledby="poetry-title">
+      <div class="section-heading">
+        <p class="section-kicker">Scrittura</p>
+        <h2 id="poetry-title">✒️ Concorsi di poesia</h2>
+        <p>
+          Qui compariranno i countdown dei concorsi letterari.
+          In futuro potremo aggiungerne quanti ne vuoi.
+        </p>
       </div>
 
-      <p class="countdown-message" data-message></p>
-    </article>
+      <div class="countdown-grid poetry-grid">
+        <article class="countdown-card" id="concorso-letterario">
+          <h3>Concorso letterario</h3>
 
-    <article class="countdown-card" id="vacanze">
-      <h3>Vacanze</h3>
+          <div class="countdown-timer">
+            <div>
+              <span class="countdown-number" data-days>0</span>
+              <span class="countdown-label">giorni</span>
+            </div>
 
-      <div class="countdown-timer">
-        <div>
-          <span class="countdown-number" data-days>0</span>
-          <span class="countdown-label">giorni</span>
-        </div>
+            <div>
+              <span class="countdown-number" data-hours>0</span>
+              <span class="countdown-label">ore</span>
+            </div>
 
-        <div>
-          <span class="countdown-number" data-hours>0</span>
-          <span class="countdown-label">ore</span>
-        </div>
+            <div>
+              <span class="countdown-number" data-minutes>0</span>
+              <span class="countdown-label">minuti</span>
+            </div>
 
-        <div>
-          <span class="countdown-number" data-minutes>0</span>
-          <span class="countdown-label">minuti</span>
-        </div>
+            <div>
+              <span class="countdown-number" data-seconds>0</span>
+              <span class="countdown-label">secondi</span>
+            </div>
+          </div>
 
-        <div>
-          <span class="countdown-number" data-seconds>0</span>
-          <span class="countdown-label">secondi</span>
-        </div>
+          <p class="countdown-message" data-message></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="page-section motivation-section" aria-labelledby="motivation-title">
+      <div class="section-heading">
+        <p class="section-kicker">Promemoria</p>
+        <h2 id="motivation-title">🌱 Frasi motivazionali per scrivere</h2>
       </div>
 
-      <p class="countdown-message" data-message></p>
-    </article>
-  </div>
-</section>
-<script src="config.js"></script>
-<script src="script.js"></script>
+      <div class="motivation-grid">
+        <article class="motivation-card">
+          <p>
+            Scrivere poco, ma tornare spesso: anche una frase salvata oggi
+            può diventare una poesia domani.
+          </p>
+        </article>
+
+        <article class="motivation-card">
+          <p>
+            Un concorso non è solo una scadenza: è un modo per dare forma
+            a qualcosa che altrimenti resterebbe sospeso.
+          </p>
+        </article>
+
+        <article class="motivation-card">
+          <p>
+            Non serve sentirsi pronti. Serve consegnare una versione viva,
+            imperfetta, ma reale.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="page-section vacation-section" aria-labelledby="vacation-title">
+      <div class="section-heading">
+        <p class="section-kicker">Respiro</p>
+        <h2 id="vacation-title">🌊 Countdown vacanze</h2>
+        <p>
+          Qui compariranno i countdown verso le prossime vacanze,
+          pause e partenze.
+        </p>
+      </div>
+
+      <div class="countdown-grid vacation-grid">
+        <article class="countdown-card" id="vacanze">
+          <h3>Vacanze</h3>
+
+          <div class="countdown-timer">
+            <div>
+              <span class="countdown-number" data-days>0</span>
+              <span class="countdown-label">giorni</span>
+            </div>
+
+            <div>
+              <span class="countdown-number" data-hours>0</span>
+              <span class="countdown-label">ore</span>
+            </div>
+
+            <div>
+              <span class="countdown-number" data-minutes>0</span>
+              <span class="countdown-label">minuti</span>
+            </div>
+
+            <div>
+              <span class="countdown-number" data-seconds>0</span>
+              <span class="countdown-label">secondi</span>
+            </div>
+          </div>
+
+          <p class="countdown-message" data-message></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Fatto con calma, countdown e una quantità ragionevole di ansia poetica.
+    </p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
