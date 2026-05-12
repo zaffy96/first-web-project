@@ -100,9 +100,18 @@ button {
 }
 
 .countdown-message {
-  margin-top: 20px;
+  display: none;
+  margin: 18px 0 0;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: #eef7ee;
+  color: #245c35;
+  font-weight: 700;
   text-align: center;
-  font-weight: 600;
+}
+
+.countdown-message.is-visible {
+  display: block;
 }
 
 /* Versione per schermi piccoli */
@@ -151,9 +160,17 @@ button {
   color: #1f2933;
 }
 .countdown-message {
-  margin-top: 20px;
-  text-align: center;
+  display: none;
+  margin: 18px 0 0;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: #eef7ee;
+  color: #245c35;
   font-weight: 700;
-  font-size: 1.1rem;
-  color: #1f2933;
+  text-align: center;
 }
+
+.countdown-message.is-visible {
+  display: block;
+}
+
