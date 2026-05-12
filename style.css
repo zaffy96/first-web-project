@@ -256,4 +256,13 @@ main {
   .site-footer {
     width: min(100% - 24px, 1180px);
   }
+/* ================================
+   DESCRIZIONE CARD COUNTDOWN
+================================ */
+
+.countdown-description {
+  margin: -8px 0 18px;
+  font-size: 0.92rem;
+  color: #52616b;
+  line-height: 1.4;
 }
