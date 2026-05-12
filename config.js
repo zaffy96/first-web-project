@@ -7,6 +7,7 @@
    3. vacanze
 
    Per cambiare una data, modifica solo targetDate.
+   Per cambiare il testo sotto una card, modifica description.
 
    Formato data:
    "AAAA-MM-GGTHH:MM:SS"
@@ -20,18 +21,21 @@ window.siteConfig = {
     {
       id: "concorso-letterario",
       title: "Concorso letterario",
+      description: "Scadenza principale per l’invio dei testi poetici.",
       targetDate: "2026-05-11T23:59:59",
       finishedMessage: "Il conto alla rovescia per il concorso letterario è terminato."
     },
     {
       id: "premio-poesia-estate",
       title: "Premio poesia estate",
+      description: "Promemoria per preparare una selezione di poesie estive.",
       targetDate: "2026-07-15T23:59:59",
       finishedMessage: "La scadenza del premio poesia estate è arrivata."
     },
     {
       id: "concorso-autunnale",
       title: "Concorso autunnale",
+      description: "Scadenza autunnale per rivedere, scegliere e inviare i testi.",
       targetDate: "2026-10-01T23:59:59",
       finishedMessage: "La scadenza del concorso autunnale è arrivata."
     }
@@ -47,33 +51,23 @@ window.siteConfig = {
     {
       id: "vacanze",
       title: "Vacanze",
+      description: "Countdown principale verso la prossima pausa.",
       targetDate: "2026-04-01T00:00:00",
       finishedMessage: "Le vacanze sono iniziate."
     },
     {
       id: "weekend-mare",
       title: "Weekend al mare",
+      description: "Piccola fuga marina per respirare un po’.",
       targetDate: "2026-08-01T09:00:00",
       finishedMessage: "Il weekend al mare è iniziato."
     },
     {
       id: "viaggio-autunno",
       title: "Viaggio d'autunno",
+      description: "Promemoria per una partenza autunnale.",
       targetDate: "2026-11-20T08:00:00",
       finishedMessage: "Il viaggio d'autunno è iniziato."
     }
   ]
 };
-
-/* 
-   Questa parte serve solo a mantenere compatibilità
-   con il JavaScript attuale.
-
-   Nel prossimo micro-step aggiorneremo script.js
-   in modo che legga direttamente da siteConfig.
-*/
-
-window.countdownConfig = [
-  ...window.siteConfig.poetryCompetitions,
-  ...window.siteConfig.vacations
-];
