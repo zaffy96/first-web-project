@@ -11,7 +11,9 @@
   <header class="hero-section">
     <div class="hero-card">
       <p class="hero-kicker">Piccola dashboard personale</p>
+
       <h1>⏳ Countdown poetici e vacanzieri</h1>
+
       <p class="hero-text">
         Una pagina semplice per tenere d’occhio concorsi di poesia,
         scadenze importanti e giorni mancanti alle prossime vacanze.
@@ -23,113 +25,59 @@
     <section class="page-section poetry-section" aria-labelledby="poetry-title">
       <div class="section-heading">
         <p class="section-kicker">Scrittura</p>
+
         <h2 id="poetry-title">✒️ Concorsi di poesia</h2>
+
         <p>
-          Qui compariranno i countdown dei concorsi letterari.
-          In futuro potremo aggiungerne quanti ne vuoi.
+          Qui trovi i countdown dei concorsi letterari. Puoi aggiungere,
+          rimuovere o modificare i concorsi direttamente dal file
+          <strong>config.js</strong>.
         </p>
       </div>
 
-      <div class="countdown-grid poetry-grid">
-        <article class="countdown-card" id="concorso-letterario">
-          <h3>Concorso letterario</h3>
-
-          <div class="countdown-timer">
-            <div>
-              <span class="countdown-number" data-days>0</span>
-              <span class="countdown-label">giorni</span>
-            </div>
-
-            <div>
-              <span class="countdown-number" data-hours>0</span>
-              <span class="countdown-label">ore</span>
-            </div>
-
-            <div>
-              <span class="countdown-number" data-minutes>0</span>
-              <span class="countdown-label">minuti</span>
-            </div>
-
-            <div>
-              <span class="countdown-number" data-seconds>0</span>
-              <span class="countdown-label">secondi</span>
-            </div>
-          </div>
-
-          <p class="countdown-message" data-message></p>
-        </article>
-      </div>
+      <!-- 
+        Le card dei concorsi vengono create automaticamente da script.js
+        leggendo i dati da config.js
+      -->
+      <div class="countdown-grid poetry-grid"></div>
     </section>
 
     <section class="page-section motivation-section" aria-labelledby="motivation-title">
       <div class="section-heading">
         <p class="section-kicker">Promemoria</p>
+
         <h2 id="motivation-title">🌱 Frasi motivazionali per scrivere</h2>
+
+        <p>
+          Piccoli promemoria per non perdere il filo tra scadenze,
+          bozze e tentativi.
+        </p>
       </div>
 
-      <div class="motivation-grid">
-        <article class="motivation-card">
-          <p>
-            Scrivere poco, ma tornare spesso: anche una frase salvata oggi
-            può diventare una poesia domani.
-          </p>
-        </article>
-
-        <article class="motivation-card">
-          <p>
-            Un concorso non è solo una scadenza: è un modo per dare forma
-            a qualcosa che altrimenti resterebbe sospeso.
-          </p>
-        </article>
-
-        <article class="motivation-card">
-          <p>
-            Non serve sentirsi pronti. Serve consegnare una versione viva,
-            imperfetta, ma reale.
-          </p>
-        </article>
-      </div>
+      <!-- 
+        Le frasi motivazionali vengono create automaticamente da script.js
+        leggendo motivationQuotes dentro config.js
+      -->
+      <div class="motivation-grid"></div>
     </section>
 
     <section class="page-section vacation-section" aria-labelledby="vacation-title">
       <div class="section-heading">
         <p class="section-kicker">Respiro</p>
+
         <h2 id="vacation-title">🌊 Countdown vacanze</h2>
+
         <p>
-          Qui compariranno i countdown verso le prossime vacanze,
-          pause e partenze.
+          Qui trovi i countdown verso vacanze, pause, partenze e momenti
+          in cui ricordarsi che esiste anche il mare.
         </p>
       </div>
 
-      <div class="countdown-grid vacation-grid">
-        <article class="countdown-card" id="vacanze">
-          <h3>Vacanze</h3>
-
-          <div class="countdown-timer">
-            <div>
-              <span class="countdown-number" data-days>0</span>
-              <span class="countdown-label">giorni</span>
-            </div>
-
-            <div>
-              <span class="countdown-number" data-hours>0</span>
-              <span class="countdown-label">ore</span>
-            </div>
-
-            <div>
-              <span class="countdown-number" data-minutes>0</span>
-              <span class="countdown-label">minuti</span>
-            </div>
-
-            <div>
-              <span class="countdown-number" data-seconds>0</span>
-              <span class="countdown-label">secondi</span>
-            </div>
-          </div>
-
-          <p class="countdown-message" data-message></p>
-        </article>
-      </div>
+      <!-- 
+        Le card delle vacanze vengono create automaticamente da script.js
+        leggendo i dati da config.js
+      -->
+      <div class="countdown-grid vacation-grid"></div>
     </section>
   </main>
 
