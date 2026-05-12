@@ -22,6 +22,12 @@ function createCountdownCard(countdown) {
   card.innerHTML = `
     <h3>${countdown.title}</h3>
 
+    ${
+      countdown.description
+        ? `<p class="countdown-description">${countdown.description}</p>`
+        : ""
+    }
+
     <div class="countdown-timer">
       <div>
         <span class="countdown-number" data-days>0</span>
