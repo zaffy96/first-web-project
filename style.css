@@ -1,102 +1,166 @@
+/* ================================
+   BASE GENERALE
+================================ */
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: system-ui, sans-serif;
-  background: #123456;
-  color: #f9fafb;
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f6f2eb;
+  color: #1f2933;
+  line-height: 1.5;
 }
 
 main {
-  max-width: 600px;
-  padding: 2rem;
-  border-radius: 24px;
-  background: #1f2937;
-  text-align: center;
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
 }
 
-h1 {
-  font-size: 3rem;
-}
-
-p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-}
-
-button {
-  margin-top: 1rem;
-  padding: 0.8rem 1.2rem;
-  border: none;
-  border-radius: 999px;
-  font-size: 1rem;
-  cursor: pointer;
-}
 /* ================================
-   COUNTDOWN SECTION
-   Sezione con due countdown:
-   - Concorso letterario
-   - Vacanze
+   HERO
 ================================ */
 
-.countdown-section {
-  max-width: 1100px;
-  margin: 64px auto;
-  padding: 32px 20px;
+.hero-section {
+  width: min(1180px, calc(100% - 32px));
+  margin: 40px auto 32px;
 }
 
-.countdown-section h2 {
+.hero-card {
+  padding: 48px 32px;
+  border-radius: 28px;
+  background: #ffffff;
+  border: 1px solid #e4ded4;
+  box-shadow: 0 18px 50px rgba(31, 41, 51, 0.08);
   text-align: center;
-  margin-bottom: 32px;
-  font-size: 2rem;
 }
 
-.countdown-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+.hero-kicker {
+  margin: 0 0 12px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8a5f3c;
+  font-weight: 700;
 }
+
+.hero-card h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.05;
+}
+
+.hero-text {
+  max-width: 720px;
+  margin: 20px auto 0;
+  font-size: 1.1rem;
+  color: #52616b;
+}
+
+/* ================================
+   SEZIONI
+================================ */
+
+.page-section {
+  margin: 32px 0;
+  padding: 32px;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid #e4ded4;
+  overflow: hidden;
+}
+
+.section-heading {
+  max-width: 760px;
+  margin-bottom: 24px;
+}
+
+.section-kicker {
+  margin: 0 0 8px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8a5f3c;
+  font-weight: 700;
+}
+
+.section-heading h2 {
+  margin: 0 0 10px;
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+}
+
+.section-heading p {
+  margin: 0;
+  color: #52616b;
+}
+
+/* ================================
+   GRIGLIE
+   Desktop: 3 card per riga
+================================ */
+
+.countdown-grid,
+.motivation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+/* ================================
+   CARD COUNTDOWN
+================================ */
 
 .countdown-card {
-  padding: 28px;
-  border: 1px solid #dddddd;
-  border-radius: 18px;
+  min-width: 0;
+  padding: 22px;
+  border-radius: 22px;
   background: #ffffff;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e4ded4;
+  box-shadow: 0 10px 28px rgba(31, 41, 51, 0.06);
 }
 
 .countdown-card h3 {
-  margin-bottom: 24px;
-  font-size: 1.4rem;
-  text-align: center;
+  margin: 0 0 18px;
+  font-size: 1.2rem;
+  overflow-wrap: break-word;
 }
+
+/* ================================
+   NUMERI COUNTDOWN
+================================ */
 
 .countdown-timer {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
 }
 
 .countdown-timer div {
-  padding: 16px 8px;
-  border-radius: 14px;
-  background: #f5f5f5;
+  min-width: 0;
+  padding: 14px 8px;
+  border-radius: 16px;
+  background: #f8f3ec;
+  border: 1px solid #eadfce;
   text-align: center;
 }
 
 .countdown-number {
   display: block;
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: clamp(1.45rem, 2.5vw, 1.9rem);
+  font-weight: 800;
   line-height: 1;
+  color: #1f2933;
 }
 
 .countdown-label {
   display: block;
-  margin-top: 8px;
-  font-size: 0.85rem;
-  color: #666666;
+  margin-top: 7px;
+  font-size: 0.78rem;
+  color: #6b7280;
+  overflow-wrap: break-word;
 }
 
 .countdown-message {
@@ -114,63 +178,82 @@ button {
   display: block;
 }
 
-/* Versione per schermi piccoli */
-@media (max-width: 768px) {
-  .countdown-grid {
+/* ================================
+   FRASI MOTIVAZIONALI
+================================ */
+
+.motivation-card {
+  min-width: 0;
+  padding: 24px;
+  border-radius: 22px;
+  background: #fffaf3;
+  border: 1px solid #eadfce;
+  box-shadow: 0 10px 28px rgba(31, 41, 51, 0.05);
+}
+
+.motivation-card p {
+  margin: 0;
+  font-size: 1rem;
+  color: #38444d;
+  overflow-wrap: break-word;
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+.site-footer {
+  width: min(1180px, calc(100% - 32px));
+  margin: 32px auto 40px;
+  padding: 24px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+/* Schermi medi: 2 card per riga */
+@media (max-width: 820px) {
+  .countdown-grid,
+  .motivation-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Schermi piccoli: 1 card per riga */
+@media (max-width: 580px) {
+  main {
+    width: min(100% - 24px, 1180px);
+  }
+
+  .hero-section {
+    width: min(100% - 24px, 1180px);
+    margin-top: 20px;
+  }
+
+  .hero-card {
+    padding: 36px 22px;
+    border-radius: 22px;
+  }
+
+  .page-section {
+    padding: 24px 18px;
+  }
+
+  .countdown-grid,
+  .motivation-grid {
     grid-template-columns: 1fr;
   }
 
-  .countdown-section {
-    margin: 40px auto;
-    padding: 24px 16px;
+  .countdown-card,
+  .motivation-card {
+    padding: 20px;
   }
 
-  .countdown-timer {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .countdown-number {
-    font-size: 1.7rem;
+  .site-footer {
+    width: min(100% - 24px, 1180px);
   }
 }
-/* ================================
-   CORREZIONE COLORI COUNTDOWN
-   Migliora il contrasto dei numeri
-================================ */
-
-.countdown-timer div {
-  background: #ffffff;
-  border: 1px solid #d8d8d8;
-}
-
-.countdown-number {
-  color: #1f2933;
-}
-
-.countdown-label {
-  color: #4b5563;
-}
-
-.countdown-card {
-  background: #fdfdfd;
-  border: 1px solid #d6d6d6;
-}
-
-.countdown-card h3 {
-  color: #1f2933;
-}
-.countdown-message {
-  display: none;
-  margin: 18px 0 0;
-  padding: 12px 14px;
-  border-radius: 14px;
-  background: #eef7ee;
-  color: #245c35;
-  font-weight: 700;
-  text-align: center;
-}
-
-.countdown-message.is-visible {
-  display: block;
-}
-
